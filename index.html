@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música sem Partitura</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <main class="conteudo">
+        <h1>Sobre a Teoria Musical</h1>
+        <p class="paragrafo">A <strong>teoria musical</strong> explora os princípios e estruturas que fundamentam a criação e análise da música. Ela nos mostra não apenas como a música é desenvolvida, mas também como ela pode ser interpretada.</p>        
+
+<!-- Botões para os níveis -->
+<div class="botoes">
+    <button class="nivel-btn" onclick="abrirModal('iniciante')">Nível Iniciante</button>
+    <button class="nivel-btn" onclick="abrirModal('intermediario')">Nível Intermediário</button>
+    <button class="nivel-btn" onclick="abrirModal('avancado')">Nível Avançado</button>
+</div>
+
+<!-- Modais -->
+<div id="modal-iniciante" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('iniciante')">&times;</span>
+        <ul>
+            <li><a href="som.html">Introdução às definições</a></li>
+            <li><a href="intervalos.html">Intervalos musicais</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-intermediario" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('intermediario')">&times;</span>
+        <ul>
+            <li><a href="acordes.html">Em breve...</a></li>
+            <li><a href="ritmos.html">Em breve...</a></li>
+            <li><a href="escala.html">Em breve...</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-avancado" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('avancado')">&times;</span>
+        <ul>
+            <li><a href="improvisacao.html">Em breve...</a></li>
+            <li><a href="harmonia.html">Em breve...</a></li>
+            <li><a href="composicao.html">Em breve...</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function abrirModal(id) {
+        document.getElementById('modal-' + id).style.display = 'flex';
+    }
+
+    function fecharModal(id) {
+        document.getElementById('modal-' + id).style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
